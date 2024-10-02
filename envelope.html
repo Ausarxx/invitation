@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Date Invitation</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #c576b6;
+            font-family: Arial, sans-serif;
+        }
+        .envelope {
+            width: 300px;
+            height: 200px;
+            background-color: #fff;
+            position: relative;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        .envelope:hover {
+            transform: scale(1.05);
+        }
+        .flap {
+            width: 0;
+            height: 0;
+            border-left: 150px solid transparent;
+            border-right: 150px solid transparent;
+            border-top: 100px solid #ff9999;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 2;
+            transition: transform 0.5s ease;
+            transform-origin: top;
+        }
+        .envelope.open .flap {
+            transform: rotateX(180deg);
+        }
+        .letter {
+            width: 280px;
+            height: 180px;
+            background-color: #ffcccc;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            z-index: 1;
+            padding: 10px;
+            box-sizing: border-box;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            overflow: hidden;
+        }
+        .letter-content {
+            font-size: 14px;
+            line-height: 1.2;
+        }
+        .letter-content h2 {
+            font-size: 18px;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+        .letter-content p {
+            margin: 5px 0;
+        }
+        .envelope.open .letter {
+            opacity: 1;
+        }
+        .flower {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            bottom: 10px;
+            z-index: 3;
+        }
+        .flower.left {
+            left: 10px;
+        }
+        .flower.right {
+            right: 10px;
+        }
+        .petal {
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            background-color: #ff6666;
+            border-radius: 50%;
+            animation: bloom 2s infinite alternate;
+        }
+        .petal:nth-child(1) { transform: translate(12.5px, 0); }
+        .petal:nth-child(2) { transform: translate(23px, 12.5px); }
+        .petal:nth-child(3) { transform: translate(12.5px, 23px); }
+        .petal:nth-child(4) { transform: translate(2px, 12.5px); }
+        .flower-center {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: #ffcc00;
+            border-radius: 50%;
+            top: 15px;
+            left: 15px;
+        }
+        @keyframes bloom {
+            0% { transform: scale(0.8); }
+            100% { transform: scale(1.1); }
+        }
+    </style>
+</head>
+<body>
+    <div class="envelope" id="envelope">
+        <div class="flap"></div>
+        <div class="letter">
+            <div class="letter-content">
+                <h2>Movie Date</h2>
+                <p>Please join me for a movie date.</p>
+                <p>Date: Whatever day you want</p>
+                <p>Movie: Joker: Folie à deux</p>
+                <p>Love, <span style="color: #ff6666;">Rogin</span></p>
+            </div>
+        </div>
+        <div class="flower left">
+            <div class="petal"></div>
+            <div class="petal"></div>
+            <div class="petal"></div>
+            <div class="petal"></div>
+            <div class="flower-center"></div>
+        </div>
+        <div class="flower right">
+            <div class="petal"></div>
+            <div class="petal"></div>
+            <div class="petal"></div>
+            <div class="petal"></div>
+            <div class="flower-center"></div>
+        </div>
+    </div>
+
+    <script>
+        const envelope = document.getElementById('envelope');
+        envelope.addEventListener('click', () => {
+            envelope.classList.toggle('open');
+        });
+    </script>
+</body>
+</html>
