@@ -15,8 +15,8 @@
             font-family: Arial, sans-serif;
         }
         .envelope {
-            width: 300px;
-            height: 200px;
+            width: 400px;
+            height: 280px;
             background-color: #fff;
             position: relative;
             cursor: pointer;
@@ -28,9 +28,9 @@
         .flap {
             width: 0;
             height: 0;
-            border-left: 150px solid transparent;
-            border-right: 150px solid transparent;
-            border-top: 100px solid #ff9999;
+            border-left: 200px solid transparent;
+            border-right: 200px solid transparent;
+            border-top: 140px solid #ff9999;
             position: absolute;
             top: 0;
             left: 0;
@@ -42,14 +42,14 @@
             transform: rotateX(180deg);
         }
         .letter {
-            width: 280px;
-            height: 180px;
+            width: 380px;
+            height: 260px;
             background-color: #ffcccc;
             position: absolute;
             top: 10px;
             left: 10px;
             z-index: 1;
-            padding: 10px;
+            padding: 15px;
             box-sizing: border-box;
             text-align: center;
             display: flex;
@@ -61,13 +61,13 @@
             overflow: hidden;
         }
         .letter-content {
-            font-size: 14px;
-            line-height: 1.2;
+            font-size: 16px;
+            line-height: 1.3;
         }
         .letter-content h2 {
-            font-size: 18px;
+            font-size: 22px;
             margin-top: 0;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
         }
         .letter-content p {
             margin: 5px 0;
@@ -77,37 +77,37 @@
         }
         .flower {
             position: absolute;
-            width: 40px;
-            height: 40px;
-            bottom: 10px;
+            width: 50px;
+            height: 50px;
+            bottom: 15px;
             z-index: 3;
         }
         .flower.left {
-            left: 10px;
+            left: 15px;
         }
         .flower.right {
-            right: 10px;
+            right: 15px;
         }
         .petal {
             position: absolute;
-            width: 15px;
-            height: 15px;
+            width: 20px;
+            height: 20px;
             background-color: #ff6666;
             border-radius: 50%;
             animation: bloom 2s infinite alternate;
         }
-        .petal:nth-child(1) { transform: translate(12.5px, 0); }
-        .petal:nth-child(2) { transform: translate(23px, 12.5px); }
-        .petal:nth-child(3) { transform: translate(12.5px, 23px); }
-        .petal:nth-child(4) { transform: translate(2px, 12.5px); }
+        .petal:nth-child(1) { transform: translate(15px, 0); }
+        .petal:nth-child(2) { transform: translate(30px, 15px); }
+        .petal:nth-child(3) { transform: translate(15px, 30px); }
+        .petal:nth-child(4) { transform: translate(0, 15px); }
         .flower-center {
             position: absolute;
-            width: 10px;
-            height: 10px;
+            width: 15px;
+            height: 15px;
             background-color: #ffcc00;
             border-radius: 50%;
-            top: 15px;
-            left: 15px;
+            top: 17.5px;
+            left: 17.5px;
         }
         @keyframes bloom {
             0% { transform: scale(0.8); }
@@ -120,11 +120,14 @@
         <div class="flap"></div>
         <div class="letter">
             <div class="letter-content">
-                <h2>You are invited!</h2>
-                <p>I hereby invite you to a movie date.</p>
-                <p>Choose any day you want.</p>
-                <p>The movie will be Joker: Folie à deux</p>
-                <p>Love, <span style="color: #ff6666;">Rogin</span></p>
+                <h2>Seriously?</h2>
+                <p>If you came back here, then there is something unresolved about you.
+                    So don't be shy to hit me up. I couldn't care about who you are entertaining,
+                    but this letter is a reminder that you still yearn for me. And the movie date is still on
+                    the table. This letter will count how many times the envelop is opened. So I will know when you'll
+                    visit this page. So you must DM me or else I might be the one to make the first move. This is not a threat.
+                    Show your true self.
+                </p>
             </div>
         </div>
         <div class="flower left">
